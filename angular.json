@@ -104,9 +104,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "pc-repair-website"
+  "defaultProject": "pc-repair-website",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
