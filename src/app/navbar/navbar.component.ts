@@ -16,6 +16,11 @@ export class NavbarComponent implements OnInit {
     let something = '';
   }
 
+  reload() {
+    this.navBurger.nativeElement.classList.toggle('is-active', false);
+    this.navMenu.nativeElement.classList.toggle('is-active', false);
+  }
+
   toggleNavbar() {
     this.navBurger.nativeElement.classList.toggle('is-active');
     this.navMenu.nativeElement.classList.toggle('is-active');
