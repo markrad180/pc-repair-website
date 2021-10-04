@@ -1,18 +1,25 @@
-<!-- Header -->
-<div class="navbar is-dark">
-  <!-- Logo -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" routerLink="/">
-      <img src="/assets/images/logo.png">
+      <img src="/assets/images/encitive.png" width="112" height="28">
+    </a>
+
+    <a (click)="toggleNavbar()" role="button" #navBurger class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
     </a>
   </div>
 
-  <!-- Menu -->
-  <div class="navbar-menu">
-  <div class="navbar-end">
-    <a class="navbar-item" routerLink="/">Home</a>
-    <a class="navbar-item" routerLink="/contact">Contact Us</a>
-  </div>
-  </div>
+  <div id="navbarBasicExample" class="navbar-menu" #navMenu>
+    <div class="navbar-start">
+      <a (click)="toggleNavbar()" class="navbar-item" routerLink="/">
+        Home
+      </a>
 
-</div>
+      <a (click)="toggleNavbar()" class="navbar-item" routerLink="/contact">
+        Contact
+      </a>
+    </div>
+  </div>
+</nav>
